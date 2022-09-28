@@ -18,7 +18,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   animation-name: slide-up;
   animation-duration: 1s;
 }
@@ -27,18 +27,20 @@
   align-items: stretch;
   position: relative;
   height: 50px;
+  gap: 2px;
 }
 .shareMeMobile .innerWrapper span {
-  border: 1px solid white;
   flex-grow: 4;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: white;
 }
 
 .shareMeInline {
+  background-color: transparent;
 }
 .shareMeInline .innerWrapper {
   display: flex;
@@ -46,19 +48,21 @@
   flex-wrap: wrap;
 }
 .shareMeInline .innerWrapper span {
-  padding: 10px;
+  padding: 20px;
   width: 20px;
   height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: white;
 }
 
 .shareMeDesktop {
   position: fixed;
   left: 0;
   top: 20%;
+  background-color: transparent;
   animation-name: slide-in;
   animation-duration: 1s;
 }
@@ -69,13 +73,14 @@
   flex-wrap: wrap;
 }
 .shareMeDesktop .innerWrapper span {
-  padding: 10px;
+  padding: 20px;
   width: 20px;
   height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: white;
 }
 
 .textWhite {
@@ -118,7 +123,7 @@
   background-color: #25d366;
 }
 .bgShare {
-  background-color: #dadada;
+  background-color: #000000;
 }
 
 /* Animation */
@@ -205,6 +210,7 @@
   cursor: pointer;
   border-radius: 4px;
   transition: all 200ms ease-in-out;
+  color: white;
 }
 .shareMeModal .modalContent .shareBtns button:hover,
 .shareMeModal .modalContent .shareBtns button:focus {
@@ -212,6 +218,10 @@
 }
 .shareMeModal .modalContent .shareBtns button i {
   padding: 0 5px;
+}
+
+.shareMeModal .modalContent .shareBtns button span {
+  color: white;
 }
 .shareMeModal .modalContent .modalFooter {
   text-align: center;
