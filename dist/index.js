@@ -25,10 +25,12 @@ class ShareMe {
 
         this.defaultSettings = {
             style: "inline",
-            bgColor: "white",
-            textColor: "",
+            modalBgColor: "white",
+            modalTextColor: "black",
+            modalOverlayColor: "rgba(0, 0, 0, 0.4)",
+            modalAccentColor: "black",
             fontFamily: "",
-            primaryButtons: "facebook,twitter,linkedin,skype",
+            primaryButtons: "facebook,twitter,linkedin,gmail",
             modalButtons: "blogger,facebook,gmail,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
             showClipboardLink: true,
             buttonBorderRadius: "12px",
@@ -160,19 +162,19 @@ class ShareMe {
     // Prepare Modal 
     prepareModal(shareBtns, url) {
         let modalTemplete =
-            `<div class="shareMeModal shareMeModal-${this.modalId} hide">
-            <div class="modalContent">
+            `<div class="shareMeModal shareMeModal-${this.modalId} hide" style=" background-color: ${this.settings.modalOverlayColor};">
+            <div class="modalContent" style="background-color:${this.settings.modalBgColor}">
                 <div class="modalHeader">
-                    <p>Share on</p>
-                    <span class="modal-dismiss" data-dismiss=".shareMeModal-${this.modalId}">&times;</span>
+                    <p style="color:${this.settings.modalTextColor};">Share on</p>
+                    <span class="modal-dismiss" data-dismiss=".shareMeModal-${this.modalId}" style="color:${this.settings.modalTextColor};">&times;</span>
                 </div>
                 {{shareBtns}}
+                <hr>
                 <div class="modalFooter">
-                    <p>------------------------</p>
-                    <p>Directly share the link</p>
+                    <p style="color:${this.settings.modalTextColor};">Directly share the link</p>
                     <div class="shareLinkWrapper">
-                        <input type="url" value="{{url}}" readonly>
-                        <button>
+                        <input type="url" style="background-color:${this.settings.modalBgColor};color:${this.settings.modalTextColor};border-color:${this.settings.modalAccentColor}" value="{{url}}" readonly>
+                        <button style="background-color:${this.settings.modalAccentColor}">
                             <i class="fa-solid fa-clipboard"></i>
                         </button>
                     </div>

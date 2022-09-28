@@ -21,19 +21,25 @@
 <script>
     new ShareMe('.div1', {
         style: "mobile",
-        bgColor: "orange",
+        modalOverlayColor: "yellow",
+        modalBgColor: "white",
+        modalTextColor: "black",
         primaryButtons: "facebook,twitter,pinterest,skype,whatsapp",
         modalButtons: "blogger,gmail,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
     });
     new ShareMe('.div2', {
         style: "inline",
-        bgColor: "orange",
+        modalOverlayColor: "transparent",
+        modalBgColor: "black",
+        modalTextColor: "white",
         primaryButtons: "blogger,facebook,gmail,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
         modalButtons: "blogger,facebook,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
     });
     new ShareMe('.div3', {
         style: "desktop",
-        bgColor: "orange",
+        modalOverlayColor: "rgb(0,0,0,0.4)",
+        modalBgColor: "white",
+        modalTextColor: "black",
         primaryButtons: "pinterest,twitter,skype,whatsapp",
         modalButtons: "blogger,facebook,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
     });
