@@ -1,0 +1,259 @@
+/* Brand Colors
+1.  blogger     =    #f57d00
+2.  facebook    =    #1877f2
+3.  gmail       =    #ea4335
+4.  linkedin    =    #0077b5
+5.  messenger   =    #0084ff
+6.  pinterest   =    #e60023
+7.  print       =    #fbbc05
+8.  skype       =    #00aff0
+9.  telegram    =    #0088cc
+10. twitter     =    #1da1f2
+11. viber       =    #59267cS
+12. whatsapp    =    #25d366
+*/
+
+.shareMeMobile {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  animation-name: slide-up;
+  animation-duration: 1s;
+}
+.shareMeMobile .innerWrapper {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  height: 50px;
+}
+.shareMeMobile .innerWrapper span {
+  border: 1px solid white;
+  flex-grow: 4;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.shareMeInline {
+}
+.shareMeInline .innerWrapper {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.shareMeInline .innerWrapper span {
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.shareMeDesktop {
+  position: fixed;
+  left: 0;
+  top: 20%;
+  animation-name: slide-in;
+  animation-duration: 1s;
+}
+.shareMeDesktop .innerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+.shareMeDesktop .innerWrapper span {
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.textWhite {
+  color: white;
+}
+.bgBlogger {
+  background-color: #f57d00;
+}
+.bgFacebook {
+  background-color: #1877f2;
+}
+.bgGmail {
+  background-color: #ea4335;
+}
+.bgLinkedin {
+  background-color: #0077b5;
+}
+.bgMessenger {
+  background-color: #0084ff;
+}
+.bgPinterest {
+  background-color: #e60023;
+}
+.bgPrint {
+  background-color: #fbbc05;
+}
+.bgSkype {
+  background-color: #00aff0;
+}
+.bgTelegram {
+  background-color: #0088cc;
+}
+.bgTwitter {
+  background-color: #1da1f2;
+}
+.bgViber {
+  background-color: #59267c;
+}
+.bgWhatsapp {
+  background-color: #25d366;
+}
+.bgShare {
+  background-color: #dadada;
+}
+
+/* Animation */
+
+@keyframes slide-up {
+  0% {
+    left: 0;
+    bottom: -50px;
+  }
+  100% {
+    left: 0;
+    bottom: 0;
+  }
+}
+@keyframes slide-in {
+  0% {
+    left: -50px;
+    /* bottom: -50px; */
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Modal */
+
+.shareMeModal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.shareMeModal.hide {
+  display: none;
+}
+.shareMeModal.show {
+  display: block;
+}
+
+.shareMeModal .modalContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.shareMeModal .modalContent .modalHeader {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shareMeModal .modalContent .modal-dismiss {
+  display: flex;
+  justify-content: end;
+  font-weight: bold;
+  font-size: larger;
+}
+.shareMeModal .modalContent .modal-dismiss:hover,
+.shareMeModal .modalContent .modal-dismiss:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.shareMeModal .modalContent .shareBtns {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.shareMeModal .modalContent .shareBtns button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+}
+.shareMeModal .modalContent .shareBtns button:hover,
+.shareMeModal .modalContent .shareBtns button:focus {
+  opacity: 0.7;
+}
+.shareMeModal .modalContent .shareBtns button i {
+  padding: 0 5px;
+}
+.shareMeModal .modalContent .modalFooter {
+  text-align: center;
+}
+.shareMeModal .modalContent .modalFooter .shareLinkWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+}
+.shareMeModal .modalContent .modalFooter .shareLinkWrapper input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid rgb(140, 0, 255);
+  border-radius: 4px;
+  cursor: not-allowed;
+  color: rgb(98, 98, 98);
+  outline: none;
+}
+.shareMeModal .modalContent .modalFooter .shareLinkWrapper button {
+  padding: 10px 15px;
+  background-color: rgb(140, 0, 255);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.shareMeModal .modalContent .modalFooter .shareLinkWrapper button:hover {
+  opacity: 0.7;
+}
+
+.shareMeModal .modalContent .modalFooter .clipboardStatus {
+  color: green;
+}
+
+.shareMeModal .dNone {
+  display: none;
+}
+
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}

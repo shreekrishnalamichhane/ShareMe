@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div1">
+    </div>
+    <div class="div2">
+    </div>
+    <div class="div3">
+    </div>
+</body>
+<script src="./index.js"></script>
+<script>
+    new ShareMe('.div1', {
+        style: "mobile",
+        bgColor: "orange",
+        primaryButtons: "facebook,twitter,pinterest,skype,whatsapp",
+        modalButtons: "blogger,gmail,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
+    });
+    new ShareMe('.div2', {
+        style: "inline",
+        bgColor: "orange",
+        primaryButtons: "blogger,facebook,gmail,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
+        modalButtons: "blogger,facebook,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
+    });
+    new ShareMe('.div3', {
+        style: "desktop",
+        bgColor: "orange",
+        primaryButtons: "pinterest,twitter,skype,whatsapp",
+        modalButtons: "blogger,facebook,linkedin,messenger,pinterest,print,skype,telegram,twitter,viber,whatsapp",
+    });
+</script>
+
+</html>
